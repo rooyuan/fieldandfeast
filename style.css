@@ -1,0 +1,265 @@
+/* CSS BY Leanna Chan */
+
+/* IMPORTED FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ROOT VARIABLES */
+:root {
+    --midnight-blue: #1F2A44;
+    --olive-green: #76885B;
+    --champagne-gold: #E5C185;
+    --linen: #F8F4EC;
+    --dark-charcoal: #2B2B2B;
+    --soft-white: #FAF9F6;
+
+    --font: 'Playfair Display', serif;
+}
+
+/* GLOBAL STYLES (mobile first/small) */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--linen);
+    color: var(--dark-charcoal);
+}
+
+header, footer {
+    background-color: var(--midnight-blue);
+    color: var(--soft-white);
+
+}
+
+header img {
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 10rem;
+}
+
+header h1 {
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+header p {
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem 1.5rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--midnight-blue);
+    padding-bottom: 0.6rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--soft-white);
+    padding: 0.3rem 0 0.5rem;
+}
+
+p, ul {
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+nav {
+    background-color: var(--champagne-gold);
+    padding: 0.75rem;
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--midnight-blue);
+    font-weight: bold;
+}
+
+main {
+    display: block;
+    margin: 2rem 9.5rem;
+}
+
+hr {
+    border: solid var(--champagne-gold);
+}
+
+#about, #offerings, #gallery {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+#offerings {
+    display: grid;
+    color: var(--soft-white);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+#offerings section {
+    background-color: var(--olive-green);
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 8px;
+}
+
+#offerings h2 {
+    grid-column: 1 / -1;
+}
+
+#offerings section:last-of-type {
+    grid-column: 1 / -1;
+}
+
+#offerings ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding: 0 0.8rem;
+    margin-left: 0;
+}
+
+#gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 1rem 0;
+
+}
+
+#gallery figure {
+    background-color: var(--soft-white);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 2px 2px 8px;
+}
+
+#gallery img {
+    width: 100%;
+    display: block;
+}
+
+#gallery figcaption {
+    padding: 0.5rem;
+    font-style: italic;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+#gallery a {
+    display: flex;
+    justify-content: center;
+    background-color: var(--olive-green);
+    color: var(--soft-white);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    padding: 0.75rem;
+}
+
+footer {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+    flex-direction: column;
+    line-height: 1.4;
+}
+
+footer #socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--champagne-gold);
+}
+
+/* MEDIA QUERY (medium) */
+
+@media screen and (min-width: 600px) {
+    
+}
+
+/* MEDIA QUERY (large) */
+
+@media screen and (min-width: 900px) {
+    
+}
+
+/* MEDIA QUERY (xl) */
+
+@media screen and (min-width: 1200px) {
+    
+}
