@@ -179,6 +179,11 @@ hr {
     margin-left: 0;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 #gallery .gallery-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -194,10 +199,7 @@ hr {
     box-shadow: 2px 2px 8px;
 }
 
-#gallery img {
-    width: 100%;
-    display: block;
-}
+
 
 #gallery figure {
     background-color: var(--soft-white);
